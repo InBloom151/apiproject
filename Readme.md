@@ -1,29 +1,30 @@
-#REST API для системы комментариев блога
+<h1>REST API для системы комментариев блога</h1>
 
-###Используемые технологии:
-###- Django 4.0.4
-###- Django RESTFramework 3.13.1
-###- Postgresql 14.0
-###- Docker 3.8
+<h3>Используемые технологии:</h3>
+<h4>- Django 4.0.4</h4>
+<h4>- Django RESTFramework 3.13.1</h4>
+<h4>- Postgresql 14.0</h4>
+<h4>- Docker 3.8</h4>
 
-##Запуск проекта:
+<h2>Запуск проекта:</h2>
 
-Проект запускается на локальном хосте через docker-compose
+Проект запускается на локальном хосте через <b>docker-compose</b>
 
 Поддерживаемые хосты:
 
     http://127.0.0.1:8000/
     http://localhost:8000/
 
-Все зависимости находятся в файле req.txt
+Все зависимости находятся в файле <b>req.txt</b>
 
-Все данные, необходимые для подключения к БД находятся в файле .env.dev
+Все данные, необходимые для подключения к БД находятся в файле <b>.env.dev</b>
 
-БД запускается локально и доступна через порт 5432
+БД запускается локально и доступна через порт <b>5432</b>
 
-##Список поддерживаемых запросов:
+<h2>Список поддерживаемых запросов:</h2>
 
-###api/v1/posts/
+<h3>api/v1/posts/</h3>
+
     GET - возвращает список всех постов
 
     POST - добавляет пост
@@ -33,7 +34,8 @@
             "user": user_id /опционально
         }
 
-###api/v1/posts/{post_id}/
+<h3>api/v1/posts/{post_id}/</h3>
+
     GET - возвращает конкретный пост по id
     
     PATCH - изменяет данные поста по id
@@ -44,16 +46,20 @@
 
     DELETE - удаляет конкретный пост по id 
 
-###api/v1/posts/{post_id}/post_comments
+<h3>api/v1/posts/{post_id}/post_comments/</h3>
+
     GET - Получает ВСЕ комментарии к посту
 
-###api/v1/posts/{post_id}/post_comments_to_third
+<h3>api/v1/posts/{post_id}/post_comments_to_third/</h3>
+
     GET - Получает комментарии к посту ДО третьего уровня вложенности
 
-###api/v1/posts/{post_id}/post_comments_from_third
+<h3>api/v1/posts/{post_id}/post_comments_from_third/</h3>
+
     GET - Получает все вложенные комментарии для комментариев третьего уровня к посту
 
-###api/v1/comments/
+<h3>api/v1/comments/</h3>
+
     GET - Получает все комментарии из БД
 
     POST - Добавляет комментарий
@@ -66,7 +72,8 @@
         }
     
 
-###api/v1/comments/{comment_id}
+<h3>api/v1/comments/{comment_id}/</h3>
+
     GET - Получает комментарий по id
     
     PATCH - Изменяет комментарий по id
@@ -76,8 +83,10 @@
 
     DELETE - Удаляет комментарий по id
 
-###api/v1/comments/comments_to_third
+<h3>api/v1/comments/comments_to_third/</h3>
+
     GET - Получает все комментарии до третьего уровня вложенности
 
-###api/v1/comments/comments_from_third
+<h3>api/v1/comments/comments_from_third/</h3>
+
     GET - Получает все вложенные комментарии для комментариев третьего уровня
